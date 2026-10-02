@@ -39,3 +39,10 @@ normalise it first (for example by formatting a parsed address from
 
 - `reverseDnsName(ip: string): string` — returns the PTR domain name. Throws
   `TypeError` for non-string input, `Error` for malformed addresses.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
