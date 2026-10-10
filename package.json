@@ -1,6 +1,6 @@
 {
   "name": "reverse-dns-name",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Converts an IPv4 or IPv6 address into its PTR record domain name per RFC 3596.",
   "type": "module",
   "main": "src/index.js",
